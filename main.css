@@ -21,6 +21,10 @@
 #form-100{
 	width: 100%;
 }
+#form-80{
+	width: 80%;
+	margin:  0 auto;
+}
 .form-imput{
 	display: block;
 	height: 25px;
