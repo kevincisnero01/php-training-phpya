@@ -1,9 +1,14 @@
 <?php
-if($code == 200){
-	echo"<div class='alert alert-sucess'></div>";
-}elseif($code == 400){
-	echo"<div class='alert alert-error'>  Contraseñas No coinciden, por favor verifique</div>";
-}elseif($code == 100){
-	echo"<div class='alert alert-warning'>  Por favor ingrese los campos requeridos</div>";
+
+function menssages($code,$detail) //, $msj, $error
+{
+	if($code == 200){
+		$detail = !empty($detail) ? $detail : "Consulta Exitosa";
+		echo"<div class='box box-sucess'><b>[$code]</b> $detail</div>";
+	}elseif($code == 400){
+		$detail = !empty($detail) ? $detail : "Consulta Fallida";
+		echo"<div class='box box-error'><b>Código:</b>$code  <b>Detalle:</b>$detail</div>";
+	}
 }
+
 ?>
