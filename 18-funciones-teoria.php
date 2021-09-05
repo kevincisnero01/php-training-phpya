@@ -7,7 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-<h1>Funciones</h1>
+<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+<div class="container c50">
+<h1>Funciones-Teoria</h1>
 <pre>
 La sintaxis para la definición de una función en PHP es:
 
@@ -49,7 +51,6 @@ $cub = $valor * $valor * $valor;
   echo "El cuadrado de 2 es:" . $c1 . "<br>";
   echo "El cubo de 2 es:" . $c2;
   ?>
-
-<br><br><a href="18-funciones-formulario.php">Ir a Ejercicio Practico</a>
+</div><!--container-->
 </body>
 </html>

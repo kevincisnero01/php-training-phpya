@@ -2,22 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Ejercicios php</title>
+	<title>PHP</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<style type="text/css">
-	.box{
-		display: inline-block;
-		border: 1px solid gray;
-		border-radius: 5px;
-		margin: 5px;
-	}
-	#container{
-		margin-left: 50px;
-	}
-</style>
 <body>
-<h1>Tablas de Multiplicar-Estructuras repetitivas (for, while, do/while)</h1>
+<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+<div class="container c50">
+<h1>Estructura repetitivas(for, while, do/while) - Tablas de Multiplicar</h1>
 <h3>TEORIA:</h3>
 	<pre>
 	<b>Estructura for:</b>
@@ -44,8 +35,8 @@
 	</pre>
 	<!-- la condición se verifica luego de ejecutarse el bloque repetitivo.-->
 <h3>PRACTICA:</h3>
-	<div id="container">
-	<div class="box">
+	<center>
+	<div class="box line">
 	<?php
 	echo"<b>Tabla del 3:</b><br>";
 	$cont1 = 1;
@@ -57,7 +48,7 @@
 	?>
 	</div><!--box1-->
 
-	<div class="box">
+	<div class="box line">
 	<?php
 	echo"<b>Tabla del 6:</b><br>";
 	$cont2 = 1;
@@ -71,7 +62,7 @@
 	?>
 	</div><!--box1-->
 
-	<div class="box">
+	<div class="box line">
 	<?php
 	echo"<b>Tabla del 9:</b><br>";
 	$cont3 = 1;
@@ -83,6 +74,7 @@
 	}while(($cont3 <= 10));
 	?>
 	</div><!--box1-->
+	</center>
 </div><!--container-->
 </body>
 </html>

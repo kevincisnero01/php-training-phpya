@@ -2,11 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Formulario</title>
+	<title>PHP</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<h1>Vectores</h1>
+<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+<div class="container c50">
+	<h1>Vectores-Teoria</h1>
 	<ul>
 		<li>La traduccion al ingles de <b>Vector</b> es <b>Array</b></li>
 		<li>Un array es una coleccion de valores</li>
@@ -33,5 +35,6 @@
 	}
 
 	?>
+</div>
 </body>
 </html>

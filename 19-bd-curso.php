@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<a id="menu-exercices"  href="../">Ejercicios</a>
+	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
 	<div class="container c50">
 	<h1 class="tcenter"><u>Ejercicio de Base de datos#1</u></h1>
 	<p><b>Problema:</b> Debe crear una base de datos, luego  crear una tabla  "cursos" , seguido de una pagina con un formulario para registrar un curso y por ultimo una pagina que procese los datos.</p>

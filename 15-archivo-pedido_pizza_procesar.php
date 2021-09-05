@@ -13,7 +13,7 @@ $pizza3_type = isset($_POST['pizza3_type']) ? $_POST['pizza3_type'] : null;
 $pizza3_qty = isset($_POST['pizza3_qty']) ? $_POST['pizza3_qty'] : null;
 
 
-$ar = fopen('storage/pedidos.txt','w') or die ("Problemas para grabar");
+$ar = fopen('storage/pedidos.txt','a') or die ("Problemas para grabar");
 fputs($ar,"====================");
 fputs($ar,"\n");
 fputs($ar,"-<b>Pedido N15156</b>");
@@ -39,8 +39,5 @@ if(!empty($pizza3_type)){
 fputs($ar,"====================");
 fputs($ar,"\n");
 fclose($ar);
-echo "Pedido Registrado Exitosamente <br>";
-echo"<a href='16-archivo-pedido_pizza_formulario.php'>Formulario de Pedido</a><br>";
-echo"<a href='17-archivo-pedido_pizza_lectura.php'>Lectura de Pedido</a>";
-
+header('location:15-archivo-pedido_pizza_formulario.php?code=1');
 ?>

@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+<div class="container c50">
 <h1>Vector ASOCIATIVO</h1>
   <li>Un vector asociativo permite acceder a un elemento del vector por medio de un subíndice de tipo string.</li>  
   <li>Ahora vemos que para imprimir el nombre de la persona no debemos recordar una posición dentro de un vector sino un nombre de clave. Esto se hace indispensable cuando administramos un conjunto de datos grandes.</li>
@@ -52,8 +54,7 @@ echo"<br><br><b>OUTPUT:</b><br>";
 foreach ($users as $key => $value) {
   echo"<li>$key = $value </li>";
 }
-
-
 ?>
+</div>
 </body>
 </html>

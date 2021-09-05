@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+<div class="container c50">
 	<h1>Tipos de variables en php </h1>
 
 	<p>En php no es necesario definir el tipo de dato que almacena antes de utilizarla, las variables se le declaran al momento de darle un valor</p>
@@ -24,5 +26,6 @@
 		$null = null;
 		echo "<p class='box'>$null es de tipo NULL</p><br>";
 	?>
+</div>
 </body>
 </html>

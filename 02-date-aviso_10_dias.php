@@ -3,29 +3,24 @@
 <head>
 	<meta charset="utf-8">
 	<title>2</title>
-	<style type="text/css">
-		h3{
-			border: 1px solid gray;
-			border-radius: 5px;
-			padding: 5px;
-			display: inline-block;
-			margin: 5px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+<div class="container c50">
 	<h1>Uso de <u>date</u> en php </h1>
 	<?php
 		$dia = date('d');
-		echo "<h3>$dia</h3>";
-
+		echo "<p><b>Input: </b>$dia</p>";
+		echo "<p><b>Output: </b>";
 		if($dia <= 10)
 		{
-			echo "<h3>Sitio Activo</h3>";
+			echo "Sitio Activo";
 		}else{
-			echo "<h3>Sitio Web en Mantenimiento</h3>";
+			echo "Sitio Web en Mantenimiento";
 		}
 
 	?>
+</div>
 </body>
 </html>

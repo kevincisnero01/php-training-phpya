@@ -4,20 +4,12 @@
 	<meta charset="utf-8">
 	<title>PHP</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<style type="text/css">
-
-	.pizza_label{
-	display: inline-block;
-	width: 50%;
-	}
-	.pizza_input{
-	width: 35%;
-	text-align: center;
-	}
-	</style>
 </head>
 <body>
-<h1>Pedido Pizza-Crear Archivos</h1>
+<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+<a class="menu menu2"  href="16-archivo-pedido_pizza_lectura.php">Leer Archivo</a>
+<div class="container c50">
+<h1>Archivo-Crear pedido de pizza</h1>
 <p>
 	<b>Ejercicio: </b>
 	Confeccionar un programa en PHP que permita hacer el pedido de pizzas via internet.
@@ -37,41 +29,52 @@
 	Grabar en un archivo de texto llamado "pedidos.txt" cada pedido, separados por una línea de puntos entre cada pedido
 </p>
 <br>
-	<fieldset id="form-50">
-		<legend>Ingrese los datos solicitados</legend>
-		<form action="16-archivo-pedido_pizza_procesar.php" method="POST">
+	<fieldset class="c90 center">
+		<legend class="b">Ingrese los datos solicitados</legend>
+		<form action="15-archivo-pedido_pizza_procesar.php" method="POST">
 
 			<label for="name">Nombre: </label>
-			<input type="text" name="name" id="name" class="form-imput" value="jose torres" required>
+			<input type="text" name="name" id="name" class="finput" value="jose torres" required>
 
 			<label for="address">Direccion: </label>
-			<input type="text" name="address" id="address" class="form-imput" value="El centro" required>
+			<input type="text" name="address" id="address" class="finput" value="El centro" required>
 			<b><u>Tipos de Pizza:</u></b>
 			<ul>
 				<li>
-				<label for="p1" class="pizza_label">
+				<label for="p1" class="c40 line">
 					<input type="checkbox" name="pizza1_type" id="p1" value="Jamon y Queso"> Jamon y Queso
 				</label>
-				<b>Cantidad:</b> <input type="number" name="pizza1_qty" value="1" class="pizza_input">
+				<b>Cantidad:</b> <input type="number" name="pizza1_qty" value="1" class="c40 tcenter">
 				</li>
 
 				<li>
-				<label for="p2" class="pizza_label">
+				<label for="p2" class="c40 line">
 					<input type="checkbox" name="pizza2_type" id="p2" value="Napolitana"> Napolitana
 				</label>
-				<b>Cantidad:</b> <input type="number" name="pizza2_qty" value="1" class="pizza_input" >
+				<b>Cantidad:</b> <input type="number" name="pizza2_qty" value="1" class="c40 tcenter" >
 				</li>
 
 				<li>
-				<label for="p3" class="pizza_label">
+				<label for="p3" class="c40 line">
 					<input type="checkbox" name="pizza3_type" id="p3" value="Muzzarella"> Muzzarella
 				</label>
-				<b>Cantidad:</b> <input type="number" name="pizza3_qty" value="1" class="pizza_input" >
+				<b>Cantidad:</b> <input type="number" name="pizza3_qty" value="1" class="c40 tcenter" >
 				</li>
 			</ul>
 
-			<button type="submit" class="form-imput">Enviar</button>
+			<button type="submit" class="finput b">Guardar</button>
 		</form>
 	</fieldset>
+<?php
+$code = isset($_REQUEST['code']) ? $_REQUEST['code'] : null;
+if(!empty($code)){
+	if($code == 1){
+		echo "<div class='box box-sucess'><b>Registro en archivo</b> exitoso</div>";
+	}else{
+		echo "<div class='box box-error'><b>Registro fallido</b></div>";
+	}
+}
+?>
+</div>
 </body>
 </html>

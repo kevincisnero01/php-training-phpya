@@ -4,3 +4,18 @@
 -<b>Direccion:</b> 
 <b>-Pizzas:</b> 
 ====================
+====================
+-<b>Pedido N15156</b>
+-<b>Cliente:</b> jose torres2
+-<b>Direccion:</b> El centro2
+<b>-Pizzas:</b> 
+<li>-Jamon y Queso : 6</li>
+<li>-Napolitana : 3</li>
+<li>-Muzzarella : 2</li>
+====================
+====================
+-<b>Pedido N15156</b>
+-<b>Cliente:</b> 
+-<b>Direccion:</b> 
+<b>-Pizzas:</b> 
+====================

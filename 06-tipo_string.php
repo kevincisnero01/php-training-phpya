@@ -2,10 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Ejercicios php</title>
+	<title>PHP</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+<div class="container c50">
 	<h1>Variables de tipos string </h1>
 
 	<ul>
@@ -22,5 +24,6 @@
 		echo "Juan nacio en la fecha <b>$nacimiento</b>, ";
 		echo "por tanto tiene la edad de <b>$edad</b>,"."y eso lo hace un <b>$descripcion</b>";
 	?>
+</div>
 </body>
 </html>
