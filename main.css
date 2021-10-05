@@ -27,6 +27,21 @@
     right: 10px;
     top: 40px;
 }
+.menu3{
+	position: absolute;
+    right: 10px;
+    top: 70px;
+}
+.menu4{
+	position: absolute;
+    right: 10px;
+    top: 100px;
+}
+.menu5{
+	position: absolute;
+    right: 10px;
+    top: 130px;
+}
 /*Syntaxis:  t + [alineacion]  //'t' de texto*/
 .tcenter{
 	text-align: center;
@@ -85,6 +100,12 @@
 	text-decoration: none;
 	color: #3e3d3d;
 }
+
+.danger{
+	background: #ed0000c7;
+	color: white;
+}
+
 .box-sub{
 	border-bottom: 1px solid gray;
     padding: 5px;
@@ -107,6 +128,11 @@
 	background: #ffc8c8;
     border-color: #fe3737;
     color: #5f0000;
+}
+.box-warning{
+	background: orange;
+	border-color: #a9790d;
+    color: white;
 }
 /*Syntaxis:  f +  [input]  //'f' = formulario*/
 .finput{

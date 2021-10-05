@@ -15,6 +15,11 @@
 		}
 	?>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+	<a class="menu menu2"  href="19-bd-curso.php">Crear Curso</a>
+	<a class="menu menu3"  href="20-bd-estudiantes.php">Crear Estudiante</a>
+	<a class="menu menu4"  href="22-bd-buscar-estudiante.php">Buscar Estudiante</a>
+	<a class="menu menu5"  href="21-bd-listar-estudiantes.php">Listado de Estudiante</a>
+
 	<div class="container c50">
 	<h1 class="tcenter"><u>Ejercicio de Base de datos#2</u></h1>
 	<p><b>Problema:</b> Debe crear una base de datos, luego  crear una tabla  "estudiantes" , seguido de una pagina con un formulario para registrar un estudiante y por ultimo una pagina que procese los datos.</p>

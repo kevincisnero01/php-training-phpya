@@ -7,6 +7,10 @@
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+	<a class="menu menu2"  href="20-bd-estudiantes.php">Crear Estudiante</a>
+	<a class="menu menu3"  href="22-bd-buscar-estudiante.php">Buscar Estudiante</a>
+	<a class="menu menu4"  href="23-db-borrar-registros.php">Borrar Estudiante</a>
+
 	<div class="container c50">
 	<h1 class="tcenter"><u>Listado de estudiantes</u></h1>
 	<p><b>Problema:</b> Confeccionar un programa que recupere los datos de la tabla "estudiantes" de la base de datos.</p>
