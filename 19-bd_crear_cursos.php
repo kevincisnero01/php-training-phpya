@@ -7,6 +7,8 @@
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+	<a class="menu menu2"  href="21-bd_listar_registros.php">Listado de Registros</a>
+
 	
 	<div class="container c50">
 	<h1 class="tcenter"><u>Ejercicio de Base de datos#1</u></h1>

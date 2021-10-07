@@ -18,7 +18,7 @@
 	<a class="menu menu2"  href="19-bd_crear_cursos.php">Crear Curso</a>
 	<a class="menu menu3"  href="20-bd_crear_estudiantes.php">Crear Estudiante</a>
 	<a class="menu menu4"  href="22-bd_buscar_estudiantes.php">Buscar Estudiante</a>
-	<a class="menu menu5"  href="21-bd_listar_estudiantes.php">Listado de Estudiante</a>
+	<a class="menu menu4"  href="21-bd_listar_registros.php">Listado de Registros</a>
 
 	<div class="container c50">
 	<h1 class="tcenter"><u>Ejercicio de Base de datos#2</u></h1>

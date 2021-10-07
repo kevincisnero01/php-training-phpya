@@ -9,7 +9,7 @@
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
 	<a class="menu menu2"  href="20-bd_crear_estudiantes.php">Crear Estudiante</a>
 	<a class="menu menu3"  href="23-bd_borrar_registro.php">Borrar Estudiante</a>
-	<a class="menu menu4"  href="21-bd_listar_estudiantes.php">Listado de Estudiante</a>
+	<a class="menu menu4"  href="21-bd_listar_registros.php">Listado de Registros</a>
 
 
 	<div class="container c50">
