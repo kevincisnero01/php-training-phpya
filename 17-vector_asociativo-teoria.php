@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>PHP</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <a class="menu menu1"  href="../">Ir a Ejercicios</a>
@@ -41,19 +41,19 @@ echo $registro['dni'];
 <p><b>Ejercicio: </b>Crear un vector asociativo que almacene las claves de acceso de 5 usuarios de un sistema. Acceder a cada componente por su nombre. Imprimir una componente del vector.</p>
 
 <?php
-$users = [
-'jose' => '123',
-'gabriel' => '123',
-'maria' => '123',
-'carlos' => '123',
-'genesis' => '123',
-];
-echo"<b>INPUT:</b><br>";
-print_r($users);
-echo"<br><br><b>OUTPUT:</b><br>";
-foreach ($users as $key => $value) {
-  echo"<li>$key = $value </li>";
-}
+  $users = [
+  'jose' => '123',
+  'gabriel' => '123',
+  'maria' => '123',
+  'carlos' => '123',
+  'genesis' => '123',
+  ];
+  echo"<b>INPUT:</b><br>";
+  print_r($users);
+  echo"<br><br><b>OUTPUT:</b><br>";
+  foreach ($users as $key => $value) {
+    echo"<li>$key = $value </li>";
+  }
 ?>
 </div>
 </body>

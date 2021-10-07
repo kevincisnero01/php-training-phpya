@@ -39,5 +39,5 @@ if(!empty($pizza3_type)){
 fputs($ar,"====================");
 fputs($ar,"\n");
 fclose($ar);
-header('location:15-archivo-pedido_pizza_formulario.php?code=1');
+header('location:15-archivo_formulario_pedido_pizza.php?code=1');
 ?>

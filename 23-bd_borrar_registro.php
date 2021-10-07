@@ -4,13 +4,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>PHP</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
-	<a class="menu menu2"  href="19-bd-curso.php">Crear Curso</a>
-	<a class="menu menu3"  href="20-bd-estudiantes.php">Crear Estudiante</a>
-	<a class="menu menu4"  href="21-bd-listar-estudiantes.php">Listado de Estudiantes</a>
+	<a class="menu menu2"  href="19-bd_crear_cursos.php">Crear Curso</a>
+	<a class="menu menu3"  href="20-bd-crear_estudiantes.php">Crear Estudiante</a>
+	<a class="menu menu4"  href="21-bd-listar_estudiantes.php">Listado de Estudiantes</a>
 	<div class="container c50">
 	<h1 class="tcenter"><u>Borrar Registros</u></h1>
 
@@ -84,7 +84,7 @@ $course_name = isset($_REQUEST['course_name']) ? $_REQUEST['course_name'] : null
 		}
 	}
  ?>
- <center><a href="24-db-borrar-all_registros.php">Borrar Todos los estudiantes</a></center>
+ <center><a href="24-bd_borrar_registros.php">Borrar Todos los estudiantes</a></center>
 
 	</div><!--container-->
 </body>

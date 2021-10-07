@@ -3,10 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>PHP</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+	
 	<div class="container c50">
 	<h1 class="tcenter"><u>Ejercicio de Base de datos#1</u></h1>
 	<p><b>Problema:</b> Debe crear una base de datos, luego  crear una tabla  "cursos" , seguido de una pagina con un formulario para registrar un curso y por ultimo una pagina que procese los datos.</p>
@@ -21,7 +22,9 @@
 	</form>
 	</fieldset>
 	<?php
-	include 'helper.php';
+	include 'partials/helper.php';
+	include 'partials/conexion.php';
+	
 	$course = isset($_POST['course']) ? $_POST['course'] : null;
 	if(!empty($course)){
 		$con = mysqli_connect("localhost","root","","db-phpya") or die("Error de Conexion");

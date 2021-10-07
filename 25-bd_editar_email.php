@@ -3,20 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>PHP</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
-	<a class="menu menu2"  href="20-bd-estudiantes.php">Crear Estudiante</a>
-	<a class="menu menu3"  href="23-db-borrar-registros.php">Borrar Estudiante</a>
-	<a class="menu menu4"  href="21-bd-listar-estudiantes.php">Listado de Estudiante</a>
+	<a class="menu menu2"  href="20-bd_crear_estudiantes.php">Crear Estudiante</a>
+	<a class="menu menu3"  href="23-bd_borrar_registro.php">Borrar Estudiante</a>
+	<a class="menu menu4"  href="21-bd_listar_estudiantes.php">Listado de Estudiante</a>
 
 
 	<div class="container c50">
 	<h1 class="tcenter"><u>Editar Correo de Estudiante</u></h1>
 	<p><b>Problema:</b> De las actividades con una tabla esta es la más larga. Vamos a resolverlo implementando tres páginas, la primera un formulario de consulta del mail de un alumno, la segunda otro formulario que nos permita cargar su mail modificado y la última registrará el cambio en la tabla..</p>
 <?php
-	require_once"helper.php";
+	require_once"partials/helper.php";
+	require_once"partials/conexion.php";
+
 	$con = conexion();
     $email_search = isset($_REQUEST['email_search']) ? $_REQUEST['email_search'] : null;
     $email_new = isset($_REQUEST['email_new']) ? $_REQUEST['email_new'] : null;
@@ -69,7 +71,7 @@
         }
     }
  ?>
- <center><button type="reset"><a href="25-db-editar-email.php">	Limpiar	</a></button></center>
+ <center><button type="reset"><a href="25-bd_editar_email.php">	Limpiar	</a></button></center>
 
 		</tbody>
 	</table>

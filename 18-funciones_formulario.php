@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>PHP</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <a class="menu menu1"  href="../">Ir a Ejercicios</a>
@@ -12,7 +12,7 @@
 <p><b>Ejercicio: </b>Confeccionar un formulario que solicite la carga del nombre de usuario y su clave en dos oportunidades. En la página que se procesan los datos del formulario implementar una función que imprima un mensaje si las dos claves ingresadas son distintas.</p>
 <fieldset class="c50 center">
 	<legend class="b">Login</legend>
-	<form action="18-funciones-procesar.php" method="POST">
+	<form action="18-funciones_procesar.php" method="POST">
 		<label for="username">Usuario: </label>
 		<input type="text" name="username" value="paola" class="finput">
 		<label for="password">Contraseña: </label>

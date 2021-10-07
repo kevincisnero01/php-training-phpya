@@ -4,11 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Borrar all</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
-	<a class="menu menu2"  href="21-bd-listar-estudiantes.php">Listado de Estudiantes</a>
+	<a class="menu menu2"  href="21-bd_listar_estudiantes.php">Listado de Estudiantes</a>
 	<div class="container c50">
 
 	<h1 class="tcenter"><u>Borrar todos los registros</u></h1>
@@ -70,7 +70,7 @@
 		}
 	}
  	?>
- 	<center><a href="24-db-borrar-all_registros.php">Limpiar</a></center>
+ 	<center><a href="24-bd_borrar_registros.php">Limpiar</a></center>
 	</div><!--container-->
 </body>
 </html>

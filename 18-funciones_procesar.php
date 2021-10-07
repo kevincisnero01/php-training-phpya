@@ -13,6 +13,6 @@ function checkPassword($p1,$p2){
 
 if(!empty($password) && !empty($passwordRepeat)){
 	$response = checkPassword($password,$passwordRepeat);
-	header('location:18-funciones-formulario.php?response='.$response);
+	header('location:18-funciones_formulario.php?response='.$response);
 }
 ?>

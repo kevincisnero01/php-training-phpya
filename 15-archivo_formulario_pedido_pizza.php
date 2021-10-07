@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>PHP</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <a class="menu menu1"  href="../">Ir a Ejercicios</a>
-<a class="menu menu2"  href="16-archivo-pedido_pizza_lectura.php">Leer Archivo</a>
+<a class="menu menu2"  href="16-archivo_lectura_pedido_pizza.php">Leer Archivo</a>
 <div class="container c50">
 <h1>Archivo-Crear pedido de pizza</h1>
 <p>
@@ -31,7 +31,7 @@
 <br>
 	<fieldset class="c90 center">
 		<legend class="b">Ingrese los datos solicitados</legend>
-		<form action="15-archivo-pedido_pizza_procesar.php" method="POST">
+		<form action="15-archivo_procesarpedido_pizza.php" method="POST">
 
 			<label for="name">Nombre: </label>
 			<input type="text" name="name" id="name" class="finput" value="jose torres" required>

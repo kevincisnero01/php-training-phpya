@@ -12,4 +12,4 @@ else
 	echo "Menor de edad.";
 ?>
 <br><br>
-<button><a href="09-formulario.php">Volver al formulario</a></button>
+<button><a href="09-formulario_a.php">Volver al formulario</a></button>
