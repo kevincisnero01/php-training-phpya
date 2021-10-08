@@ -8,8 +8,8 @@
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
 	<a class="menu menu2"  href="20-bd_crear_estudiantes.php">Crear Estudiante</a>
-	<a class="menu menu3"  href="22-bd_buscar_estudiantes.php">Buscar Estudiante</a>
-	<a class="menu menu4"  href="23-bd_borrar_registro.php">Borrar Estudiante</a>
+	<a class="menu menu3"  href="19-bd_crear_cursos.php">Crear Curso</a>
+	<a class="menu menu4"  href="22-bd_buscar_estudiantes.php">Buscar Estudiante</a>
 
 	<div class="container c50">
 	<h1 class="tcenter"><u>Listado de estudiantes</u></h1>
@@ -63,7 +63,7 @@ $t_courses = $courses->num_rows;
 		echo"<tr>";
 		echo"<td class='tcenter'>$course[id]</td>";
 		echo"<td class='pl10'>$course[description]</td>";
-		echo"<td class='tcenter'> <a href='26-bd_editar_cursos.php'><button>Editar</button></a></td>";
+		echo"<td class='tcenter'> <a href='26-bd_editar_cursos.php?id_course=$course[id]'><button>Editar</button></a></td>";
 		echo"<tr>";
 		}
 		?>
