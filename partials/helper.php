@@ -9,6 +9,8 @@ function menssages($code,$detail) //, $msj, $error
 	}elseif($code == 400){
 		$detail = !empty($detail) ? $detail : "Consulta Fallida";
 		echo"<div class='box box-error'><b>Código:</b>$code  <b>Detalle:</b>$detail</div>";
+	}else{
+		echo"<div class='box box-default'><b>Código:</b>$code  <b>Detalle:</b>$detail</div>";
 	}
 }
 

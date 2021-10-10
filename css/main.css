@@ -154,6 +154,11 @@
 	border-color: #a9790d;
     color: white;
 }
+.box-default{
+	background: #d3d3d3;
+	border-color: gray;
+    color: black;
+}
 /*Syntaxis:  f +  [input]  //'f' = formulario*/
 .finput{
 	display: block;
@@ -162,7 +167,9 @@
 	margin: 5px 0px ;
 }
 
-
+.table td{
+	border: 1px solid gray;
+}
 
 .tr{
 	color: red;
