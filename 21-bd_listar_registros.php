@@ -26,7 +26,7 @@
 			echo "$row[description]";
 		}
 	}
-	echo"<table class='c80 center' border='1'><thead><tr> 	<th>Codigo</th> <th>Nombre</th> <th>Correo</th> <th>Curso</th>	</tr></thead>";
+	echo"<table class='c80 center' border='1'><thead><tr> 	<th>Codigo</th> <th>Nombre</th> <th>Correo</th> <th>Curso</th> <th>Opciones</th>	</tr></thead>";
 	$result = $con->query('SELECT * FROM students');
 	$num_result = $result->num_rows;
 	while($row = $result->fetch_array()){
@@ -37,9 +37,10 @@
 		echo "<td>";
 			getCourse($row['id_course'], $con);
 		echo"</td>";
+		echo"<td class='tcenter'> <a href='29-bd_editar_estudiantes.php?id_student=$row[id]'><button>Editar</button></a></td>";
 		echo"</tr>";
 	}
-	echo"<tfoot> <tr><th class='tright pr10' colspan='4'>Total: $num_result </th></tr> </tfoot> </table>";
+	echo"<tfoot> <tr><th class='tright pr10' colspan='5'>Total: $num_result </th></tr> </tfoot> </table>";
 	
 ?>
 <h1 class="tcenter"><u>Listado de Cursos</u></h1>
