@@ -7,8 +7,11 @@
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
+    <a class="menu menu2"  href="27-bd-estudiantes_inner_join.php">Listado de Registros</a>
+	<a class="menu menu2"  href="28-bd-estudiantes_count.php">Cursos por Estudiantes</a>
+
 	<div class="container c50">
-	<h1 class="tcenter"><u>Listado de Cursos</u></h1>
+	<h1 class="tcenter"><u>Listado de Estudiantes por Curso</u></h1>
 	<p><b>Problema:</b>Confeccionar un programa que muestre por pantalla los nombres de todos los cursos y el total de estudiantes por cursos.</p>
 <?php
     require_once"partials/helper.php";

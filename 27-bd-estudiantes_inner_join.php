@@ -7,12 +7,12 @@
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
-	<a class="menu menu2"  href="20-bd_crear_estudiantes.php">Crear Estudiante</a>
-	<a class="menu menu3"  href="19-bd_crear_cursos.php">Crear Curso</a>
-	<a class="menu menu4"  href="22-bd_buscar_estudiantes.php">Buscar Estudiante</a>
+	<a class="menu menu2"  href="21-bd_listar_registros.php">Listado de Registros</a>
+	<a class="menu menu2"  href="28-bd-estudiantes_count.php">Estudiantes por Curso</a>
+
 
 <div class="container c50">
-	<h1 class="tcenter"><u>Listado de Estudiantes</u></h1>
+	<h1 class="tcenter"><u>Listado de Cursos por Estudiante</u></h1>
 	<h3 class="tcenter">(INNER JOIN)</h3>
 	<p><b>Problema:</b> Ahora veremos como imprimir todos los alumnos inscriptos a los cursos junto al nombre del curso donde está inscripto. Los datos se encuentran en las tablas "alumnos" y "cursos". Debemos aparear el código de curso de la tabla "alumnos" con el código de la tabla "cursos"..</p>
     <?php
