@@ -26,13 +26,17 @@
     include 'partials/conexion.php';
     
     //GET VALUES
-    $id_student = isset($_REQUEST['id_student']) ? $_REQUEST['id_student'] : 1;
+    $id_student = isset($_REQUEST['id_student']) ? $_REQUEST['id_student'] : null;
     //GET VALUES EDIT
     $ope = isset($_REQUEST['ope']) ? $_REQUEST['ope'] : null;
 	$name_new = isset($_REQUEST['name_new']) ? $_REQUEST['name_new'] : null;
 	$email_new = isset($_REQUEST['email_new']) ? $_REQUEST['email_new'] : null;
     $id_course_new = isset($_REQUEST['id_course_new']) ? $_REQUEST['id_course_new'] : 1;
-
+	//INICIALIZE VALUES
+	$name_current = "";
+	$email_current = "";
+	$curso_current = "";
+			
 	if(!empty($ope) && $ope == 'update'){
         $con->query("UPDATE students SET name = '$name_new', email = '$email_new', id_course = '$id_course_new' WHERE id = $id_student");
         $affected_student = $con->affected_rows;
@@ -41,24 +45,22 @@
     if(!empty($id_student)){
         $student = $con->query("SELECT * FROM students WHERE id = '$id_student' ");
         $result_student = $student->num_rows;
-    }
 
-    if($result_student>0){
-        while($row = $student->fetch_array()){
-            $name_current = $row['name'];
-            $email_current = $row['email'];
-            $curso_current = $row['id_course'];
-        }
-    }else{
-        $name_current = "";
-        $email_current = "";
-        $curso_current = "";
-    }
+		if($result_student>0){
+			while($row = $student->fetch_array()){
+				$name_current = $row['name'];
+				$email_current = $row['email'];
+				$curso_current = $row['id_course'];
+			}
+		}
+	}
 
     
 ?>
+<?php if(!empty($id_student)){ ?>
 	<fieldset class="center c50">
 		<legend class="b">Editar Estudiante</legend>
+		
 		<form action="#" method="GET">
             <input type="hidden" name="ope" value="update">
             <input type="hidden" name="id_student" value="<?php echo$id_student; ?>">
@@ -89,8 +91,12 @@
 			<button type="submit" class="finput b">Editar</button>
 			<p class="box-sub">Los campos con <span class="tr">*</span> son obligatorios</p>
 		</form>
+		
 	</fieldset>
 	<?php
+	}else{ 
+		echo"<p class='box box-default'>Estudiante no Identificado, Si desea editar por favor dirijase primero al <a href='21-bd_listar_registros.php'>listado de estudiantes</a>, y presione el boton de <b>editar</b>.</p>"; 
+	}
 
     if(!empty($ope) && $ope == 'update'){
         if($affected_student>0){
