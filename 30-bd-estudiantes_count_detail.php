@@ -8,13 +8,12 @@
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
 	<a class="menu menu2"  href="21-bd_listar_registros.php">Listado de Registros</a>
-	<a class="menu menu2"  href="28-bd-estudiantes_count.php">Estudiantes por Curso(General)</a>
+	<a class="menu menu2"  href="27-bd-estudiantes_inner_join.php">Estudiantes por Curso (General)</a>
 
 
 <div class="container c50">
-	<h1 class="tcenter"><u>Listado de Cursos por Estudiante</u></h1>
-	<h3 class="tcenter">(INNER JOIN)</h3>
-	<p><b>Problema:</b> Ahora veremos como imprimir todos los alumnos inscriptos a los cursos junto al nombre del curso donde está inscripto. Los datos se encuentran en las tablas "alumnos" y "cursos". Debemos aparear el código de curso de la tabla "alumnos" con el código de la tabla "cursos"..</p>
+	<h1 class="tcenter"><u>Listado de Estudiantes en Curso (Detalle)</u></h1>
+	<p><b>Problema:</b> Confeccionar un programa que muestre el nombre del curso, la cantidad de inscriptos y todos los inscriptos a dicho curso.</p>
     <?php
         require_once"partials/helper.php";
         
@@ -28,8 +27,11 @@
 			return $con;
 		}
 
-		$con = conexion();
-
+        $con = conexion();
+        $id_course = (isset($_REQUEST['id_course'])) ? $_REQUEST['id_course'] : null ;
+    
+        if(!empty($id_course))
+        {
 	?>
 	<table class="c80 center" border=1>
 		<thead>
@@ -42,9 +44,10 @@
 		<tbody>
 			<?php 
 				$students = $con->query("
-				SELECT alu.*, cur.*
+                SELECT alu.*, cur.*
 				FROM students AS alu
-				INNER JOIN courses AS cur ON cur.id=alu.id_course
+                INNER JOIN courses AS cur ON cur.id=alu.id_course
+                WHERE cur.id = $id_course
 				");
 				
 				$total_std = $students->num_rows;
@@ -68,6 +71,13 @@
 			<td class='tcenter'> <?php echo $total_std; ?></td>
 		</tfoot>
 	</table>
+    <br>
+    <center><a href='28-bd-estudiantes_count.php'><button>Volver</button></a></center>
+    <?php 
+        }else{
+            menssages(100," Curso No Identificado, por favor dirijase al: <a href='27-bd-estudiantes_inner_join.php'><u>Listado de Estudiantes en Curso (General)</u></a> para poder filtral los estudiantes");
+        }
+    ?>
 
 </div><!--container-->
 </body>

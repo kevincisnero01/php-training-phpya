@@ -11,7 +11,7 @@
 	<a class="menu menu2"  href="28-bd-estudiantes_count.php">Cursos por Estudiantes</a>
 
 	<div class="container c50">
-	<h1 class="tcenter"><u>Listado de Estudiantes por Curso</u></h1>
+	<h1 class="tcenter"><u>Listado de Estudiantes por Curso (General)</u></h1>
 	<p><b>Problema:</b>Confeccionar un programa que muestre por pantalla los nombres de todos los cursos y el total de estudiantes por cursos.</p>
 <?php
     require_once"partials/helper.php";
@@ -26,6 +26,7 @@
 			<th class='tcenter c20'>Codigo</th>
 			<th class='pl5'>Curso</th>
 			<th class='c20'>Estudiantes</th>
+            <th>Opciones</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -55,17 +56,27 @@
                             echo $total_students[$course['description']];
                         else
                             echo "0";
-                echo"</td></tr>";
+                    echo"</td>";
+                    echo"<td class='tcenter'>";
+                    if(!empty($total_students[$course['description']]))
+                    {
+                        echo"<a href='30-bd-estudiantes_count_detail.php?id_course=$course[id]'><button>Ver Detalle</button></a>";
+                    }else{
+                        echo " - ";
+                    }
+                    echo"</td>";
+
+                echo"</tr>";
             
                 }
             }else{
-                echo"<th colspan='3' class='tcenter'> No se encontraron registros </th>";
+                echo"<th colspan='4' class='tcenter'> No se encontraron registros </th>";
             }
 		?>
 	</tbody>
 	<tfooter>
 		<tr>
-			<th class='tright pr10' colspan='3'>Total Cursos: <?php echo $total_cou; ?></th>
+			<th class='tright pr10' colspan='4'>Total Cursos: <?php echo $total_cou; ?></th>
 		</tr>
 	</tfooter>
 </table>
