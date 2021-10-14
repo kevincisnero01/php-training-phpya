@@ -8,31 +8,33 @@
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
 	<a class="menu menu2"  href="21-bd_listar_registros.php">Listado de Registros</a>
-	<a class="menu menu2"  href="27-bd-estudiantes_inner_join.php">Estudiantes por Curso (General)</a>
+	<a class="menu menu2"  href="28-bd-estudiantes_count.php">Estudiantes por Curso (General)</a>
 
 
 <div class="container c50">
-	<h1 class="tcenter"><u>Listado de Estudiantes en Curso (Detalle)</u></h1>
-	<p><b>Problema:</b> Confeccionar un programa que muestre el nombre del curso, la cantidad de inscriptos y todos los inscriptos a dicho curso.</p>
-    <?php
-        require_once"partials/helper.php";
-        
-		function conexion(){
-			$con = new mysqli("localhost","root", "", "db-phpya");
+	<?php
+		//REQUIRE FILES
+		require_once"partials/helper.php";
+		require_once"partials/conexion.php";
+		//GET & INICIALIZE VALUES
+		$id_course = (isset($_REQUEST['id_course'])) ? $_REQUEST['id_course'] : null ;
+		$course_name = "Curso";
+		$con = conexion();
 
-			if($con->connect_error){
-				menssages($con->connect_errno, $con->connect_error);
+		if(!empty($id_course)){
+			$course = $con->query("SELECT * FROM courses WHERE id = $id_course");
+			if($course->num_rows > 0 ){
+				while($row = $course->fetch_array()){
+					$course_name = $row[description];
+				}
 			}
-
-			return $con;
-		}
-
-        $con = conexion();
-        $id_course = (isset($_REQUEST['id_course'])) ? $_REQUEST['id_course'] : null ;
-    
-        if(!empty($id_course))
-        {
+		}		
 	?>
+
+	<h1 class="tcenter"><u>Listado de Estudiantes en <?php echo$course_name; ?> (Detalle)</u></h1>
+	<p><b>Problema:</b> Confeccionar un programa que muestre el nombre del curso, la cantidad de inscriptos y todos los inscriptos a dicho curso.</p>
+
+	<?php if(!empty($id_course)){ ?>
 	<table class="c80 center" border=1>
 		<thead>
 			<tr>
@@ -75,7 +77,7 @@
     <center><a href='28-bd-estudiantes_count.php'><button>Volver</button></a></center>
     <?php 
         }else{
-            menssages(100," Curso No Identificado, por favor dirijase al: <a href='27-bd-estudiantes_inner_join.php'><u>Listado de Estudiantes en Curso (General)</u></a> para poder filtral los estudiantes");
+            menssages(100," Curso No Identificado, por favor dirijase al: <a href='28-bd-estudiantes_count.php'><u>Listado de Estudiantes en Curso (General)</u></a> para poder filtral los estudiantes");
         }
     ?>
 
