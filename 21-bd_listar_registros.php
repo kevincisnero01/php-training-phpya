@@ -12,15 +12,34 @@
 	<a class="menu menu4"  href="22-bd_buscar_estudiantes.php">Buscar Estudiante</a>
 
 	<div class="container c50">
+<?php 
+//INCLUDE PARTIALS
+require_once"partials/helper.php";
+require_once"partials/conexion.php";
+
+//GET VALUES
+$method  =  isset($_REQUEST['method']) ? $_REQUEST['method'] : null;
+$code  =  isset($_REQUEST['code']) ? $_REQUEST['code'] : null;
+
+//INICIALIZATE VALUES
+$con = conexion();
+
+//MESSAGES
+if(!empty($method) && !empty($code)){
+	if($method == "delete"){
+		if($code == 200){
+			menssages(200,"REGISTRO ELIMINIADO EXITOSAMENTE");
+		}elseif ($code == 400) {
+			menssages(400,"ERROR: REGISTRO NO ELIMINADO, POR FAVOR VERIFIQUE"); 
+		}
+	}
+}
+?>
 	<h1 class="tcenter"><u>Listado de estudiantes</u></h1>
 	<p><b>Problema:</b> Confeccionar un programa que recupere los datos de la tabla "estudiantes" de la base de datos.</p>
 <?php
-	require_once"partials/helper.php";
-	require_once"partials/conexion.php";
-	
-	$con = conexion();
 
-	echo"<table class='c80 center' border='1'><thead><tr> 	<th>Codigo</th> <th>Nombre</th> <th>Correo</th> <th>Curso</th> <th>Opciones</th>	</tr></thead>";
+	echo"<table class='center' border='1'><thead><tr> 	<th>Codigo</th> <th>Nombre</th> <th>Correo</th> <th>Curso</th> <th>Opciones</th>	</tr></thead>";
 	$result = $con->query('
 	SELECT std.* ,cou.description AS course
 	FROM students AS std 
@@ -36,7 +55,10 @@
 		echo "<td>$row[name] </td>";
 		echo "<td>$row[email] </td>";
 		echo "<td>$row[course]</td>";
-		echo"<td class='tcenter'> <a href='29-bd_editar_estudiantes.php?id_student=$row[id]'><button>Editar</button></a></td>";
+		echo"<td class='tcenter'> 
+				<a href='29-bd_editar_estudiantes.php?id_student=$row[id]'><button>Editar</button></a>
+				<a href='31-bd_eliminar_estudiantes.php?id_student=$row[id]'><button>Eliminar</button></a>
+			</td>";
 		echo"</tr>";
 	}
 	echo"<tfoot> <tr><th class='tright pr10' colspan='5'>Total: $num_result </th></tr> </tfoot> </table>";
