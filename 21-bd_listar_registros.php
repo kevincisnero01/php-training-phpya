@@ -20,23 +20,22 @@
 	
 	$con = conexion();
 
-	function getCourse($id,$con){
-		$result = $con->query("SELECT * FROM courses WHERE id='$id' ");
-		while($row = $result->fetch_array()){
-			echo "$row[description]";
-		}
-	}
 	echo"<table class='c80 center' border='1'><thead><tr> 	<th>Codigo</th> <th>Nombre</th> <th>Correo</th> <th>Curso</th> <th>Opciones</th>	</tr></thead>";
-	$result = $con->query('SELECT * FROM students');
+	$result = $con->query('
+	SELECT std.* ,cou.description AS course
+	FROM students AS std 
+	JOIN courses AS cou ON std.id_course = cou.id
+	');
+
 	$num_result = $result->num_rows;
+	$enum = 0;
 	while($row = $result->fetch_array()){
+		$enum ++;
 		echo"<tr>";
-		echo "<td class='tcenter'>$row[id] </td>";
+		echo "<td class='tcenter'>".$enum."</td>";
 		echo "<td>$row[name] </td>";
 		echo "<td>$row[email] </td>";
-		echo "<td>";
-			getCourse($row['id_course'], $con);
-		echo"</td>";
+		echo "<td>$row[course]</td>";
 		echo"<td class='tcenter'> <a href='29-bd_editar_estudiantes.php?id_student=$row[id]'><button>Editar</button></a></td>";
 		echo"</tr>";
 	}
