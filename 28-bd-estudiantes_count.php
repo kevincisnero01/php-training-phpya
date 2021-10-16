@@ -7,8 +7,8 @@
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
-    <a class="menu menu2"  href="27-bd-estudiantes_inner_join.php">Listado de Registros</a>
-	<a class="menu menu2"  href="28-bd-estudiantes_count.php">Cursos por Estudiantes</a>
+    <a class="menu menu2"  href="19-bd_crear_cursos.php">Crear Curso</a>
+    <a class="menu menu3 font12"  href="27-bd-estudiantes_inner_join.php">Listado de Registros</a>
 
 	<div class="container c50">
 	<h1 class="tcenter"><u>Listado de Estudiantes por Curso (General)</u></h1>
