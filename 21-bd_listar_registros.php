@@ -76,7 +76,7 @@ $t_courses = $courses->num_rows;
 		<tr>
 			<th class='tcenter c20'>Código</th>
 			<th class='pl5'>Descripción</th>
-			<th class='c20'>Opciones</th>
+			<th class='c30'>Opciones</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -85,7 +85,10 @@ $t_courses = $courses->num_rows;
 		echo"<tr>";
 		echo"<td class='tcenter'>$course[id]</td>";
 		echo"<td class='pl10'>$course[description]</td>";
-		echo"<td class='tcenter'> <a href='26-bd_editar_cursos.php?id_course=$course[id]'><button>Editar</button></a></td>";
+		echo"<td class='tcenter'> 
+				<a href='26-bd_editar_cursos.php?id_course=$course[id]'><button>Editar</button></a>
+				<a href='31-bd_eliminar_cursos.php?id_course=$course[id]'><button>Eliminar</button></a>
+			</td>";
 		echo"<tr>";
 		}
 		?>
