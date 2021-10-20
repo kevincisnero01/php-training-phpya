@@ -7,11 +7,12 @@
 </head>
 <body>
 	<a class="menu menu1"  href="../">Ir a Ejercicios</a>
-    <a class="menu menu2"  href="20-bd_crear_estudiantes.php">Crear Estudiante</a>
-    <a class="menu menu3"  href="32-bd_cursos_paginacion.php">Cursos Paginados</a>
+    <a class="menu menu2"  href="19-bd_crear_cursos.php">Crear Curso</a>
+    <a class="menu menu3"  href="32-bd_estudiantes_paginacion.php">Estudiantes Paginados</a>
+
 
 	<div class="container c50">
-	<h1 class="tcenter"><u>Estudiantes Paginados</u></h1>
+	<h1 class="tcenter"><u>Cursos Paginados</u></h1>
 	<p><b>Problema:</b> En situaciones en las cuales una consulta retorna muy muchos datos, en vez de enviarlos todos al navegador, se puede enviar un conjunto limitado de registros. Luego, mediante hipervínculos, ver el resto de datos</p>
 <?php
     require_once"partials/helper.php";
@@ -29,30 +30,27 @@
 	<thead>
 		<tr>
 			<th class='tcenter c20'>N°</th>
-			<th class='pl5'>Nombre</th>
-			<th class='c20'>Curso</th>
+			<th class='pl5'>Curso</th>
 		</tr>
 	</thead>
 	<tbody>
 		<?php
             
 
-            $students = $con->query("
-            SELECT stu.* , cou.description AS course
-            FROM students AS stu JOIN courses AS cou 
-            ON stu.id_course=cou.id
+            $courses = $con->query("
+            SELECT id, description
+            FROM courses 
             LIMIT $inicio,2
             ");
 
-            $total_students = $students->num_rows;
+            $total_courses = $courses->num_rows;
             $i = 1;
             $impresos = 0;
 
-            while($student = $students->fetch_array()){
+            while($course = $courses->fetch_array()){
                 echo"<tr>";
-                echo"<td class='tcenter'>$student[id]</td>";
-                echo"<td>$student[name]</td>";
-                echo"<td>$student[course]</td>";
+                echo"<td class='tcenter'>$course[id]</td>";
+                echo"<td>$course[description]</td>";
                 echo"</tr>";
                 $impresos++;
                 $i++;
@@ -61,23 +59,28 @@
 	</tbody>
 	<tfooter>
 		<tr>
-            <th  colspan='2'>
+            <th colspan="2" >
+                <div class="line tleft c50">
                 <?php 
                     if ($inicio == 0)
                     echo "anteriores ";
                     else {
                     $anterior = $inicio - 2;
-                    echo "<a href=\"32-bd_estudiantes_paginacion.php?pos=$anterior\">Anteriores </a>";
+                    echo "<a href=\"32-bd_cursos_paginacion.php?pos=$anterior\">Anteriores </a>";
                     }
                     if ($impresos == 2) {
                     $proximo = $inicio + 2;
-                    echo "<a href=\"32-bd_estudiantes_paginacion.php?pos=$proximo\">Siguientes</a>";
+                    echo "<a href=\"32-bd_cursos_paginacion.php?pos=$proximo\">Siguientes</a>";
                     } else
                     echo "siguientes";
                 
                 ?>
+                </div>
+                <div class="line tright c40">
+                    Total: <?php  echo$total_courses; ?>
+                </div>
             </th>
-			<th class='tright pr10'>Total: <?php  echo$total_students; ?></th>
+            
 		</tr>
 	</tfooter>
 </table>
